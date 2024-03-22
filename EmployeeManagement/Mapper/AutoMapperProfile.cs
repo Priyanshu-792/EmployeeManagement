@@ -11,8 +11,6 @@ namespace EmployeeManagement.Mapper
         public AutoMapperProfile()
         {
             CreateMap<Employee, EmployeeDTO>().ReverseMap();
-   
-
             CreateMap<Department, DepartmentDTO>().ReverseMap();
         }
     }
