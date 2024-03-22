@@ -30,14 +30,15 @@ namespace EmployeeManagement.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EmployeeDTO>>> GetAllEmployees()
-        {
+        {  // Retrieve all employees from the service
             var employees = await _employeeService.GetAllEmployeesAsync();
             return Ok(employees);
         }
 
         [HttpPost]
         public async Task<ActionResult> AddEmployee([FromBody] EmployeeDTO employeeDto)
-        {
+
+        {// Return bad request if model state is invalid
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 

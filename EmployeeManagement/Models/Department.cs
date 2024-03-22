@@ -8,7 +8,7 @@ namespace EmployeeManagement.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Department Name is required.")]
+        [Required(ErrorMessage = "Department Name is required.")]  //Proper Validations.
         [StringLength(50)]
         public string DepartmentName { get; set; }
 

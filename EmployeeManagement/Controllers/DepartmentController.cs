@@ -14,7 +14,7 @@ namespace EmployeeManagement.Controllers
 
         public DepartmentController(IDepartmentService departmentService)
         {
-            _departmentService = departmentService;
+            _departmentService = departmentService; // injection
         }
 
         [HttpGet("{id}")]
@@ -79,7 +79,7 @@ namespace EmployeeManagement.Controllers
             }
             catch (NotFoundException ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.Message); // Return not found if department is not found
             }
             catch (Exception ex)
             {
