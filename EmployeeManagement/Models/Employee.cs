@@ -11,7 +11,6 @@ namespace EmployeeManagement.Models
 
         [Required(ErrorMessage = "Name is required.")]
         [MaxLength(30)]
-        [RegularExpression(@"^[^\d\W]+$", ErrorMessage = "Name cannot contain digits or special characters.")]
         public string Name { get; set; }
 
         [Range(21, 100)]

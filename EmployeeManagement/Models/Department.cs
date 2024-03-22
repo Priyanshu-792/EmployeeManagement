@@ -10,7 +10,6 @@ namespace EmployeeManagement.Models
 
         [Required(ErrorMessage = "Department Name is required.")]
         [StringLength(50)]
-        [RegularExpression(@"^[^\d\W]+$", ErrorMessage = "Name cannot contain digits or special characters.")]
         public string DepartmentName { get; set; }
 
     }

@@ -9,7 +9,6 @@ namespace EmployeeManagement.DTOs
 
         [MaxLength(30)]
         [Required(ErrorMessage = "Name is required.")]
-        [RegularExpression(@"^[^\d\W]+$", ErrorMessage = "Name cannot contain digits or special characters.")]
         public string Name { get; set; }
 
         [Range(21, 100, ErrorMessage = "Age must be between 21 and 100")]
